@@ -1,0 +1,24 @@
+{
+  "name": "rpi-button-mqtt-sysfs",
+  "version": "0.0.1",
+  "description": "Publishes a mqtt message when a button is pushed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonaseck2/rpi-button-mqtt-sysfs.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonaseck2/rpi-button-mqtt-sysfs/issues"
+  },
+  "homepage": "https://github.com/jonaseck2/rpi-button-mqtt-sysfs#readme",
+  "dependencies": {
+    "mqtt": "^2.11.0",
+    "node-gpio": "git://github.com/paulvarache/node-gpio.git#v1"
+  }
+}
