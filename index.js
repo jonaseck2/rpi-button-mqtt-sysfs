@@ -7,8 +7,7 @@ var config = {
     'button': {}
 }
 
-config.mqtt.broker = process.env.MQTT_BROKER || 'localhost'
-config.mqtt.port = process.env.MQTT_PORT || '1883'
+config.mqtt.broker = process.env.MQTT_BROKER || 'mqtt://localhost:1883'
 config.mqtt.prefix = process.env.MQTT_PREFIX || 'media'
 config.mqtt.topic = process.env.MQTT_TOPIC || 'button'
 config.mqtt.user = process.env.MQTT_USER
@@ -19,7 +18,7 @@ var options = {}
 if(config.mqtt.user) options.username = config.mqtt.user
 if(config.mqtt.password) options.password = config.mqtt.password
 
-var client  = mqtt.connect('mqtt://' + config.mqtt.broker + ':' + config.mqtt.port, options)
+var client  = mqtt.connect(config.mqtt.broker, options)
 client.on('connect', function () {
   console.log("MQTT Connected")
 });
